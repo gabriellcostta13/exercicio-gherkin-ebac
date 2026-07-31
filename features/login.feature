@@ -1,21 +1,21 @@
 # language: pt
 
 Funcionalidade: Login na plataforma
-  Como cliente da EBAC-SHOP
-  Quero fazer login na plataforma
-  Para visualizar meus pedidos
+    Como cliente da EBAC-SHOP
+    Quero fazer o login (autenticação) na plataforma  
+    Para visualizar meus pedidos
 
-  Contexto:
+Contexto:
     Dado que o cliente está na página de login da EBAC-SHOP
 
-  Cenário: Realizar login com dados válidos
+Cenário: Realizar login com dados válidos
     Quando informar o usuário "cliente@ebacshop.com.br"
     E informar a senha "Senha@123"
     E clicar no botão "Login"
     Então o cliente deve ser direcionado para a tela de checkout
 
-  Esquema do Cenário: Impedir login quando um dos campos for inválido
-    Quando informar o usuário "<usuario>"
+Esquema do Cenário: Tentar realizar login com um dos campos inválidos
+    Quando informar o usuario "<usuario>"
     E informar a senha "<senha>"
     E clicar no botão "Login"
     Então o acesso não deve ser permitido
@@ -25,3 +25,5 @@ Funcionalidade: Login na plataforma
       | usuario                    | senha       |
       | cliente@ebacshop.com.br    | SenhaErrada |
       | usuario.invalido@teste.com | Senha@123   |
+
+
