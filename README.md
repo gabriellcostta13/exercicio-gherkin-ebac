@@ -1,36 +1,76 @@
-# Exercício Gherkin — EBAC-SHOP
+# Projeto de Testes BDD — EBAC-SHOP
 
-Conversão das três histórias de usuário do módulo 8 da EBAC em cenários Gherkin reutilizáveis para documentação e automação de testes.
+![Status](https://img.shields.io/badge/status-concluído-brightgreen)
+![BDD](https://img.shields.io/badge/testes-BDD-blue)
+![Gherkin](https://img.shields.io/badge/linguagem-Gherkin-23D96C)
+![EBAC](https://img.shields.io/badge/formação-EBAC-purple)
 
-## Estrutura
+Projeto desenvolvido durante a formação em Qualidade de Software da EBAC, com foco na transformação de histórias de usuário e critérios de aceitação em cenários BDD escritos em Gherkin.
+
+O trabalho demonstra minha capacidade de interpretar requisitos, identificar fluxos principais e alternativos e documentar comportamentos de forma clara, testável e preparada para futura automação.
+
+## Objetivo
+
+Converter três histórias de usuário da plataforma fictícia **EBAC-SHOP** em arquivos `.feature`, mantendo uma funcionalidade por arquivo e garantindo a cobertura dos critérios de aceitação fornecidos.
+
+## Competências demonstradas
+
+- Escrita de cenários BDD com Gherkin.
+- Interpretação de histórias de usuário e critérios de aceitação.
+- Modelagem de fluxos positivos e negativos.
+- Uso de `Contexto`, `Cenário` e `Esquema do Cenário`.
+- Criação de tabelas de dados e exemplos.
+- Organização de artefatos de teste para documentação ou automação.
+- Versionamento de projeto com Git e GitHub.
+
+## Funcionalidades cobertas
+
+### Configuração de produto
+
+Valida a seleção obrigatória de cor, tamanho e quantidade, o limite de dez unidades por venda e o retorno da configuração ao estado original por meio do botão **Limpar**.
+
+### Login na plataforma
+
+Contempla o acesso com credenciais válidas e as tentativas de autenticação com usuário ou senha inválidos.
+
+### Cadastro no checkout
+
+Abrange o preenchimento dos dados obrigatórios, a validação do formato de e-mail e as mensagens apresentadas quando campos obrigatórios permanecem vazios.
+
+## Estrutura do projeto
 
 ```text
-features/
-├── configurar_produto.feature
-├── login.feature
-└── checkout.feature
+exercicio-gherkin-ebac/
+├── features/
+│   ├── checkout.feature
+│   ├── configurar_produto.feature
+│   └── login.feature
+└── README.md
 ```
 
-## Cobertura dos critérios de aceitação
+## Abordagem utilizada
 
-### US-0001 — Configurar produto
+Cada arquivo contém:
 
-- Cor, tamanho e quantidade obrigatórios: `Impedir a compra sem uma seleção obrigatória`.
-- Limite de 10 produtos por venda: `Permitir a compra de 10 unidades` e `Impedir a compra de mais de 10 unidades`.
-- Retorno ao estado original: `Limpar a configuração do produto`.
+- declaração do idioma em português;
+- descrição da funcionalidade;
+- história de usuário no formato **Como / Quero / Para**;
+- contexto compartilhado quando aplicável;
+- cenários com passos **Dado / Quando / Então**;
+- fluxos alternativos e validações de erro;
+- esquemas de cenário com tabelas de exemplos.
 
-### US-0002 — Login na plataforma
+Os cenários foram escritos para servir tanto como documentação do comportamento esperado quanto como base para uma futura implementação com ferramentas como Cucumber.
 
-- Dados válidos direcionam ao checkout: `Realizar login com dados válidos`.
-- Usuário ou senha inválidos exibem alerta: `Impedir login quando um dos campos for inválido`.
+## Arquivos
 
-### US-0003 — Cadastro no checkout
+- [`configurar_produto.feature`](features/configurar_produto.feature)
+- [`login.feature`](features/login.feature)
+- [`checkout.feature`](features/checkout.feature)
 
-- Campos obrigatórios marcados com asterisco: `Identificar os campos obrigatórios do cadastro`.
-- Cadastro com todos os dados obrigatórios: `Concluir cadastro com todos os campos obrigatórios`.
-- Rejeição de e-mail em formato inválido: `Impedir cadastro com formato de e-mail inválido`.
-- Alerta para campos obrigatórios vazios: `Impedir cadastro com campo obrigatório vazio`.
+## Sobre o autor
 
-## Validação
+**Gabriel S. da Costa**  
+Profissional em formação na área de Qualidade de Software, com interesse em testes manuais, BDD, documentação de requisitos e automação de testes.
 
-Os arquivos utilizam Gherkin em português (`# language: pt`), mantêm uma funcionalidade por arquivo e incluem cenários, contextos, esquemas de cenário e tabelas de exemplos. Cada critério de aceitação do documento original está associado a pelo menos um cenário testável.
+Este repositório faz parte do meu portfólio de projetos práticos em QA.
