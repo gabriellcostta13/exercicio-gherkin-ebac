@@ -21,5 +21,3 @@ Funcionalidade: Login na plataforma
       | usuario                    | senha       |
       | cliente@ebacshop.com.br    | SenhaErrada |
       | usuario.invalido@teste.com | Senha@123   |
-
-

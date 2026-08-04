@@ -9,20 +9,14 @@ Funcionalidade: Configurar produto
   Contexto:
     Dado que o cliente está na página de um produto disponível
 
-Cenário: Adicionar produto configurado ao carrinho
+  Cenário: Adicionar produto configurado ao carrinho
     Quando o cliente configurar o produto com a cor "Azul", tamanho "M" e quantidade "1"
     E solicitar a inclusão do produto no carrinho
     Então o produto deve ser adicionado ao carrinho
 
-Esquema do Cenário: Impedir a compra sem preencher uma seleção obrigatória
+  Esquema do Cenário: Impedir a compra sem preencher uma seleção obrigatória
     Quando o cliente solicitar a inclusão no carrinho de um produto configurado com cor <cor>, tamanho <tamanho> e quantidade <quantidade>, deixando um campo obrigatório sem preenchimento
     Então o sistema deve impedir a inclusão do produto no carrinho, indicando que o campo <campo_obrigatorio> é obrigatório
-
-    Exemplos:
-      | cor             | tamanho         | quantidade    | campo_obrigatorio |
-      | não selecionada | M               | 1             | cor               |
-      | Azul            | não selecionado | 1             | tamanho           |
-      | Azul            | M               | não informada | quantidade        |
 
     Exemplos:
       | cor             | tamanho         | quantidade    | campo_obrigatorio |
