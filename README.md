@@ -18,10 +18,11 @@ O objetivo é transformar critérios de aceitação em cenários escritos em Ghe
 
 ```text
 .
-├── configurar_produto.feature
-├── login.feature
-├── checkout.feature
-└── README.md
+├── README.md
+└── features/
+    ├── checkout.feature
+    ├── configurar_produto.feature
+    └── login.feature
 ```
 
 ## Funcionalidades

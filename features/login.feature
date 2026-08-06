@@ -9,11 +9,15 @@ Funcionalidade: Login na plataforma
     Dado que o cliente está na página de login da EBAC-SHOP
 
   Cenário: Realizar login com dados válidos
-    Quando realizar login com credenciais válidas
+    Quando digitar o usuário "cliente@ebacshop.com.br"
+    E digitar a senha "Senha@123"
+    E clicar no botão "Entrar"
     Então o cliente deve ser direcionado para a tela de checkout
 
   Esquema do Cenário: Impedir o login com credenciais inválidas
-    Quando realizar login com o usuário <usuario> e a senha <senha>, utilizando credenciais inválidas
+    Quando digitar o usuário "<usuario>"
+    E digitar a senha "<senha>"
+    E clicar no botão "Entrar"
     Então o acesso deve ser negado
     E deve ser exibida a mensagem "Usuário ou senha inválidos"
 
