@@ -1,89 +1,61 @@
 # 🧪 Gherkin e BDD — Especificação de Cenários de Teste
 
-Exercício prático de **Quality Assurance** focado na especificação de comportamentos utilizando **Gherkin** e conceitos de **BDD (Behavior Driven Development)**.
-
-O projeto demonstra como transformar requisitos e critérios de aceitação em cenários de teste claros, estruturados e orientados ao comportamento esperado do sistema.
+Projeto desenvolvido para praticar a escrita de cenários de teste
+utilizando **Gherkin** e conceitos de **BDD (Behavior Driven
+Development)**.
 
 ## 🎯 Objetivo
 
-Praticar a criação de cenários utilizando uma linguagem próxima da comunicação entre negócio, desenvolvimento e QA.
+Transformar regras e comportamentos esperados da aplicação em cenários
+estruturados, utilizando uma linguagem próxima do comportamento do
+usuário.
 
-Os cenários foram estruturados buscando:
+## 🧪 Cenários
 
-* Clareza na descrição do comportamento;
-* Separação entre contexto, ação e resultado esperado;
-* Reutilização de informações;
-* Cobertura de diferentes comportamentos;
-* Facilidade de entendimento por pessoas técnicas e não técnicas.
+O projeto possui especificações relacionadas a:
 
-## 🧪 Cenários especificados
+- Login
+- Configuração de produto
+- Checkout
+- Fluxos válidos e inválidos
+- Validação de campos obrigatórios
 
-### Configuração de produto
+## 📝 Estrutura Gherkin
 
-São abordados comportamentos relacionados à configuração de produtos antes da compra:
+Os cenários utilizam a estrutura:
 
-* Seleção de cor;
-* Seleção de tamanho;
-* Limite de quantidade;
-* Limpeza das configurações;
-* Validação de campos obrigatórios.
-
-### Login
-
-São especificados cenários relacionados à autenticação:
-
-* Login válido;
-* Login inválido;
-* Mensagens de erro.
-
-### Checkout
-
-São abordados cenários relacionados ao cadastro durante o checkout:
-
-* Cadastro válido;
-* E-mail inválido;
-* Campos obrigatórios.
-
-## 🛠️ Tecnologias e ferramentas
-
-* Gherkin
-* BDD
-* Visual Studio Code
-* Git
-* GitHub
-
-## 📂 Estrutura
-
-```text
-exercicio-gherkin-ebac/
-├── README.md
-└── features/
-    ├── checkout.feature
-    ├── configurar_produto.feature
-    └── login.feature
+``` gherkin
+Feature
+Scenario
+Given
+When
+Then
+And
 ```
 
-## 🔎 Conceitos praticados
+Essa organização facilita a comunicação entre requisitos,
+desenvolvimento e testes.
 
-* Especificação de comportamento;
-* Critérios de aceitação;
-* Cenários de teste;
-* Linguagem declarativa;
-* `Given / When / Then`;
-* Esquema do Cenário;
-* Exemplos;
-* Contexto;
-* Reutilização de informações;
-* Comunicação entre QA, negócio e desenvolvimento.
+## 📁 Estrutura
 
-## 💡 O que este projeto demonstra
+``` text
+features/
+├── checkout.feature
+├── configurar_produto.feature
+└── login.feature
+```
 
-Este projeto representa uma etapa importante da formação em QA: **antes de automatizar um teste, é necessário compreender e especificar corretamente o comportamento que deve ser validado**.
+## 📌 O que este projeto demonstra
 
-A utilização de Gherkin permite estruturar os cenários de maneira objetiva, facilitando a leitura e a comunicação dos requisitos.
+- Escrita de cenários de teste
+- BDD
+- Gherkin
+- Especificação de comportamento
+- Cenários positivos e negativos
+- Organização de requisitos em linguagem estruturada
 
-## 👨‍💻 Autor
+## 👤 Autor
 
-**Gabriel Costa**
+**Gabriel Costa \| Quality Assurance (QA)**
 
-Quality Assurance (QA) | Testes Manuais | Automação de Testes em desenvolvimento
+[GitHub](https://github.com/gabriellcostta13)
